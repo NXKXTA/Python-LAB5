@@ -3,10 +3,11 @@ import re
 s1 = input("введите строку 1: ")
 s2 = input("введите строку 2: ")
 
-flag = re.findall(s2, s1)
+flag = re.findall(s2, s1)  # Ищем все непересекающиеся вхождения строки s2 в строку s1
 
 if not flag:
     print("Вхождений нет")
 else:
-    result = re.sub(s2, "", s1, len(flag) - 1)
+    result = re.sub(s2, "", s1,
+                    len(flag) - 1)  # Меняем найденные непересекающиеся подстроки s2 в строке s1 на пустую строку
     print(f"Ваша измененная строка выглядит так: {result}")
